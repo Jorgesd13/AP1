@@ -18,7 +18,7 @@ This is the general project with the ETL, EDA and firsts models and dash attempt
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/NASDigi/ECP2_new.git
+   git clone https://github.com/Jorgesd13/AP1.git
    ```
    
 2. Create a "creds/credentials.yml" file with the following settings for database connection
@@ -28,7 +28,7 @@ odbc_string: 'DSN=...;Database=...;TrustedConnection=...;MARS_Connection=...;UID
    
 3. Add submodule DigiPythonTools:
    ```bash
-   git submodule add https://github.com/NASDigi/DigiPythonTools.git
+   git submodule add https://github.com/Jorgesd13/DigiPythonTools.git
    ```
 
 4. Install dependencies:
@@ -36,7 +36,7 @@ odbc_string: 'DSN=...;Database=...;TrustedConnection=...;MARS_Connection=...;UID
    pip install -r requirements.txt
    ```
 
-### Considereations
+### Considerations
 
 Due to an update in the furnace after an outage, there's a folder called CleanData with data after the outage.
 
