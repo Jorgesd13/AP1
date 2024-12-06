@@ -1,0 +1,3 @@
+[submodule "DigiPythonTools"]
+	path = DigiPythonTools
+	url = https://github.com/Jorgesd13/DigiPythonTools.git
