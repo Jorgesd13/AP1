@@ -37,7 +37,7 @@ lime
 alibi
 artemis
 snapml
-./DigiPythonTools
+#./DigiPythonTools
 neuralsens
 kneed
 scikit-learn-intelex
