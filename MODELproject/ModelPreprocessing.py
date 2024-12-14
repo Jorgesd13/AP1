@@ -16,10 +16,10 @@ def func_import_data(days:int=30):
     ###Query table TAGS####
     #print(days)
     query='''
-    DECLARE @MaxTime AS DATETIME = (SELECT MAX(ts) FROM Digitalization.ApEng.tblAp1FceTagHistory);
+    DECLARE @MaxTime AS DATETIME = (SELECT MAX(ts) FROM DB_name.schema_name.tblTagHistory);
     
     select *
-    from Digitalization.ApEng.tblAp1FceTagHistory
+    from DB_name.schema_name.tblTagHistory
     where ts between DATEADD(DAY,-{d},@MaxTime) and @MaxTime --@MaxTime, '2024-08-11'
     order by ts asc'''.format(d=days)
     #os.chdir(r"C:\Users\js5296\PycharmProjects\ECP2_AP1")
@@ -48,7 +48,7 @@ def func_import_data(days:int=30):
     real_coils = "'" + "','".join(real_coils)  + "'"
 
     query2  = '''select top 2000000 LastProcessDate, CoilNumber, ProductID, ProductDivision, CurrentGuage, CurrentWidth, CoilLength, NetWeight, SteelGradeID
-    from nasmes.AS400.tblProceso tp
+    from DB_name.schema_name.tblProceso tp
     where  (LineID = 25) and ((tp.ProductID + COALESCE(tp.ProductDivision,'')) in ({coil_list})) order by LastProcessDate'''.format(coil_list = real_coils)
 
     min_sql = DataUtility()
@@ -76,8 +76,8 @@ def func_import_data(days:int=30):
         ,[line]
         ,[Special]
         ,csg.SteelGradeID
-    FROM [Digitalization].[QCEng].[Pyro2goals] p2g
-    INNER JOIN NASMES.NAS.catSteelGrades csg ON CAST(p2g.grade AS VARCHAR(4))=csg.Name
+    FROM [DB_name].[schema_name].[Pyro2goals] p2g
+    INNER JOIN DB_name.schema_name.catSteelGrades csg ON CAST(p2g.grade AS VARCHAR(4))=csg.Name
     WHERE line = 3310'''
 
     min_sql = DataUtility()
@@ -285,7 +285,7 @@ def func_import_data(days:int=30):
     TopGas1_2 = dfX.loc[:, dfX.columns.str.contains(".*1TopGasFlow.*|.*2TopGasFlow.*", regex=True)].mean(axis=1)
     TopGas3_4_5 = dfX.loc[:,dfX.columns.str.contains(".*3TopGasFlow.*|.*4TopGasFlow.*|.*5TopGasFlow.*", regex=True)].mean(axis=1)
     TopGas6_7_8 = dfX.loc[:,dfX.columns.str.contains(".*6TopGasFlow.*|.*7TopGasFlow.*|.*8TopGasFlow.*", regex=True)].mean(axis=1)
-    #Frop Air, Gas, Temp vars
+    #Drop Air, Gas, Temp vars
     dfX.drop(dfX.columns[dfX.columns.str.contains("TopTemp", regex=False)].tolist(), axis=1, inplace=True)
     dfX.drop(dfX.columns[dfX.columns.str.contains("TopGasFlow", regex=False)].tolist(), axis=1, inplace=True)
     dfX.drop(dfX.columns[dfX.columns.str.contains("TopAirFlow", regex=False)].tolist(), axis=1, inplace=True)
