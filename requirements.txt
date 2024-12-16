@@ -37,11 +37,7 @@ contourpy==1.3.1
 cvxpy==1.6.0
 cycler==0.12.1
 cymem==2.0.10
-<<<<<<< HEAD
-Cython==3.0.11
-=======
 Cython==0.29.37
->>>>>>> MODELproject
 daal==2025.0.0
 dash==2.18.2
 dash-bootstrap-components==1.6.0
@@ -139,11 +135,7 @@ neuralsens==0.0.26
 nltk==3.9.1
 notebook_shim==0.2.4
 numba==0.60.0
-<<<<<<< HEAD
-numpy==2.2.0
-=======
 numpy==2.0.2
->>>>>>> MODELproject
 opt_einsum==3.4.0
 optree==0.13.1
 osqp==0.6.7.post3
@@ -201,11 +193,7 @@ rich-click==1.8.5
 rpds-py==0.22.3
 safetensors==0.4.5
 scikit-image==0.24.0
-<<<<<<< HEAD
-scikit-learn==1.5.2
-=======
 scikit-learn==1.4.2
->>>>>>> MODELproject
 scikit-learn-intelex==2025.0.0
 scipy==1.14.1
 scs==3.2.7

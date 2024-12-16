@@ -1,0 +1,3 @@
+[submodule "DigiPythonTools"]
+	path = DigiPythonTools
+	url = https://github.com/NASDigi/DigiPythonTools.git
