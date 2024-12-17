@@ -3,9 +3,9 @@ creds/
 #This Project
 modeling/regression/Final/.ipynb_checkpoints/
 DigiPythonTools/
-SQLproject/
-MODELproject/
-DASHproject/
+#SQLproject/
+#MODELproject/
+#DASHproject/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

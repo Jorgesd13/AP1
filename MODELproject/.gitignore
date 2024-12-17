@@ -4,9 +4,9 @@ creds/
 DigiPythonTools/
 TryModel.ipynb
 TryPreprocessing.ipynb
-SQLproject/
-EDAproject/
-DASHproject/
+#SQLproject/
+#EDAproject/
+#DASHproject/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
