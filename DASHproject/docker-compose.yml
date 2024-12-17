@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  ecp2-maint-dash:
+    container_name: ecp2-maint-dash
+    build: .
+    image: ecp2-maint-dash:latest
+    restart: always
+    ports:
+      - "9040:8050"
+    volumes:
+      - "/home/digiadmin/Documents/services/creds/PyDashWriter:/home/project/dash/creds"
+      - "/home/digiadmin/Documents/services/creds/odbc.ini:/etc/odbc.ini"
+    command: gunicorn --bind 0.0.0.0:8050 MaintenanceDashboard:server --timeout 600
