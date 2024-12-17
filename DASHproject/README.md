@@ -18,7 +18,7 @@ This is the Maintenance dashboard Pipeline.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/NASDigi/ECP2_MaintenanceDashboard.git
+   git clone https://github.com/Jorgesd13/AP1.git
    ```
    
 2. Create a "creds/credentials.yml" file with the following settings for database connection
@@ -28,7 +28,7 @@ odbc_string: 'DSN=...;Database=...;TrustedConnection=...;MARS_Connection=...;UID
    
 3. Add submodule DigiPythonTools:
    ```bash
-   git submodule add https://github.com/NASDigi/DigiPythonTools.git
+   git submodule add https://github.com/Jorgesd13/DigiPythonTools.git
    ```
 
 4. Install dependencies:
@@ -38,13 +38,11 @@ odbc_string: 'DSN=...;Database=...;TrustedConnection=...;MARS_Connection=...;UID
 
 ### Running the Application
 
-Execute the following command in the terminal to train the model:
+Execute the following command in the terminal to create the dashboard:
 
 ```bash
 python MaintenanceDashboard.py
 ```
-
-Jupyter Notebook codes link :[http://10.1.16.189:3050/dev/lab/tree/coldmill/js5296/MaintenanceDashboardPipeline](http://10.1.16.189:3050/dev/lab/tree/coldmill/js5296/MaintenanceDashboardPipeline/MaintenanceDashboard.py)
 
 
 ## Code Structure
@@ -52,7 +50,7 @@ Jupyter Notebook codes link :[http://10.1.16.189:3050/dev/lab/tree/coldmill/js52
 The project structure is organized as follows:
 
 - `MaintenanceDashboard.py`: Maintenance dashboard file.
-- `DashPreprocessing.py`: Preprocessing file (default queries 5 days).
+- `DashPreprocessing.py`: Preprocessing file (default queries 5 days). As it queries the unavailable company DB, in this example it loads the dfXY.pickle file
 - `assets`: Folder with CSS stylesheets
 - `DigiPythonTools`: Custom utility module.
 

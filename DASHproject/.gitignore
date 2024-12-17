@@ -3,7 +3,7 @@ creds/
 #This Project
 DigiPythonTools/
 Try.ipynb
-dfXY.pickle
+#dfXY.pickle
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
